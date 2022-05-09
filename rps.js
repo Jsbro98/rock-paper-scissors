@@ -1,7 +1,7 @@
   // create the classic game of rock, paper, and scissors.
 
 /* first, we will write a function that asks the user to input a choice of either rock, paper, or scissors. 
-then store that input into a varaible called playerChoice and return it */
+then store that input into a varaible called playerPick and return it */
 let playerPick;
 let computerPick;
 
@@ -24,9 +24,9 @@ function randomNumber() {
 we will run a random number generator between 1 and 3. depending on what number is generated, 
 we will store the result in a variable and return it 
 
-if the result is 1, then it will be stored  in a variable called computerChoice with the value "rock" and return it
-if the result is 2, then it will be stored in a varaible called computerChoice wtith the value "paper" and return it
-if the result is 3, then it will be stored in a variable called computerChoice with the value "scissors" and return it */
+if the result is 1, then it will be stored  in a variable called computerPick with the value "rock" and return it
+if the result is 2, then it will be stored in a varaible called computerPick wtith the value "paper" and return it
+if the result is 3, then it will be stored in a variable called computerPick with the value "scissors" and return it */
 
 function computerChoice() {
   let number = randomNumber()
