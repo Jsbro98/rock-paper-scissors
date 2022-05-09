@@ -9,9 +9,7 @@ function playerChoice() {
   playerPick = prompt("pick rock, paper, or scissors");
   console.log(playerPick);
   return playerPick;
-}  
-
-playerChoice()
+}
 // I will write a function for the random number generator needed in the computer choice
 
 /* then we will write a function that asks the computer to make a choice 
