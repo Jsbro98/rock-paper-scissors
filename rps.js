@@ -75,6 +75,8 @@ for (let i = 0; i < number; i++) {
   let tie = roundTie();
   let win = roundWin();
   let lose = roundLose();
+
+  console.log(`player chose: ${player} & computer chose: ${computer}`)
   
 
   if(win == true) {
