@@ -10,7 +10,12 @@ function playerChoice() {
   console.log(playerPick);
   return playerPick;
 }
+
 // I will write a function for the random number generator needed in the computer choice
+
+function randomNumber() {
+  return Math.floor(((Math.random()) * 3) + 1);
+} 
 
 /* then we will write a function that asks the computer to make a choice 
 we will run a random number generator between 1 and 3. depending on what number is generated, 
@@ -20,6 +25,19 @@ if the result is 1, then it will be stored  in a variable called computerChoice 
 if the result is 2, then it will be stored in a varaible called computerChoice wtith the value "paper" and return it
 if the result is 3, then it will be stored in a variable called computerChoice with the value "scissors" and return it */
 
+function computerChoice() {
+  let number = randomNumber()
+  if(number == 1) {
+    computerPick = "rock";
+    return computerPick;
+  } else if (number == 2) {
+    computerPick = "paper";
+    return computerPick;
+  } else {
+    computerPick = "scissors";
+    return computerPick;
+  }
+}
 /* finally, we will write a function called playRound that puts the previous two functions against each other and display the results
 this will be done by testing each value of playerChoice and computerChoice, if the player wins the exchange(true) (rock beats scissors etc.), 
 we will display that the player won that round. if the player has lost the exchange (false), 
