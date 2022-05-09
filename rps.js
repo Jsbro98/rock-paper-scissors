@@ -7,8 +7,11 @@ let computerPick;
 
 function playerChoice() {
   playerPick = prompt("pick rock, paper, or scissors");
-  console.log(playerPick);
-  return playerPick;
+  playerPick = playerPick.trim().toLowerCase()
+  if(playerPick != "rock" && playerPick != "paper" && playerPick != "scissors") {
+    console.warn("rock, paper, or scissors was not chosen, an error will occur.")
+  }
+    return playerPick;
 }
 
 // I will write a function for the random number generator needed in the computer choice
@@ -38,7 +41,62 @@ function computerChoice() {
     return computerPick;
   }
 }
+
+// I will write a function to return true if the round is a tie
+
+
+
+// I will write a function to return true if the round is a win for the player
+
+
+
+// I will write a function to return true if the round is a lose for the player
+
+
+
 /* finally, we will write a function called playRound that puts the previous two functions against each other and display the results
 this will be done by testing each value of playerChoice and computerChoice, if the player wins the exchange(true) (rock beats scissors etc.), 
 we will display that the player won that round. if the player has lost the exchange (false), 
 then we will display that they lost that round. */
+
+function playRound(number) {
+for (let i = 0; i < number; i++) {
+  
+  let player = playerChoice();
+  let computer = computerChoice();
+
+  
+  let roundTie = () => {
+    if (player == "rock" && computer == "rock" || player == "paper" && computer == "paper" || player == "scissors" && computer == "scissors") {
+      return true;
+    }
+  }
+  
+  let roundWin = () => {
+    if (player == "rock" && computer == "scissors" || player == "scissors" && computer == "paper" || player == "paper" && computer == "rock") {
+      return true;
+    }
+  }
+  
+  let roundLose = () => {
+    if(player == "rock" && computer == "paper" || player == "paper" && computer == "scissors" || player == "scissors" && computer == "rock") {
+      return true;
+    }
+  }
+  
+  let tie = roundTie();
+  let win = roundWin();
+  let lose = roundLose();
+  
+
+  if(win == true) {
+      console.log("You Win!")
+  } else if (lose == true) {
+      console.log("You Lose!")
+  } else if (tie == true) {
+      console.log("It's A Tie!")
+  } else {
+      console.error("Something went wrong. Be sure to put rock, paper, or scissors in the input!")
+  }
+}
+}
