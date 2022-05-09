@@ -42,18 +42,6 @@ function computerChoice() {
   }
 }
 
-// I will write a function to return true if the round is a tie
-
-
-
-// I will write a function to return true if the round is a win for the player
-
-
-
-// I will write a function to return true if the round is a lose for the player
-
-
-
 /* finally, we will write a function called playRound that puts the previous two functions against each other and display the results
 this will be done by testing each value of playerChoice and computerChoice, if the player wins the exchange(true) (rock beats scissors etc.), 
 we will display that the player won that round. if the player has lost the exchange (false), 
