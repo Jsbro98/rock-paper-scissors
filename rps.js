@@ -79,11 +79,11 @@ for (let i = 0; i < number; i++) {
   console.log(`player chose: ${player} & computer chose: ${computer}`)
   
 
-  if(win == true) {
+  if(win) {
       console.log("You Win!")
-  } else if (lose == true) {
+  } else if (lose) {
       console.log("You Lose!")
-  } else if (tie == true) {
+  } else if (tie) {
       console.log("It's A Tie!")
   } else {
       console.error("Something went wrong. Be sure to put rock, paper, or scissors in the input!")
