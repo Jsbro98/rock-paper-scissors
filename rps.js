@@ -1,32 +1,33 @@
-  // create the classic game of rock, paper, and scissors.
-
-/* first, we will write a function that asks the user to input a choice of either rock, paper, or scissors. 
-then store that input into a varaible called playerPick and return it */
-let playerPick;
 let computerPick;
+let playerPick;
 
-function playerChoice() {
-  playerPick = prompt("pick rock, paper, or scissors");
-  playerPick = playerPick.trim().toLowerCase()
-  if(playerPick != "rock" && playerPick != "paper" && playerPick != "scissors") {
-    console.warn("rock, paper, or scissors was not chosen, an error will occur.")
-  }
-    return playerPick;
-}
+let wins = 0;
+const ROUNDWINS = document.querySelector('.rounds-won');
 
-// I will write a function for the random number generator needed in the computer choice
+let ties = 0;
+const ROUNDTIES = document.querySelector('.rounds-tied');
+
+let losses = 0;
+const ROUNDLOSSES = document.querySelector('.rounds-lost');
+
+let played = 0;
+const ROUNDPLAYED = document.querySelector('.rounds-played');
+
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+const buttons = document.querySelectorAll('button');
+const result = document.createElement('div')
+const choices = document.createElement('div')
+const resultsContainer = document.querySelector('.results-container')
+
+result.classList.add("results")
+choices.classList.add("results")
 
 function randomNumber() {
   return Math.floor(((Math.random()) * 3) + 1);
 } 
 
-/* then we will write a function that asks the computer to make a choice 
-we will run a random number generator between 1 and 3. depending on what number is generated, 
-we will store the result in a variable and return it 
-
-if the result is 1, then it will be stored  in a variable called computerPick with the value "rock" and return it
-if the result is 2, then it will be stored in a varaible called computerPick wtith the value "paper" and return it
-if the result is 3, then it will be stored in a variable called computerPick with the value "scissors" and return it */
 
 function computerChoice() {
   let number = randomNumber()
@@ -42,32 +43,33 @@ function computerChoice() {
   }
 }
 
-/* finally, we will write a function called playRound that puts the previous two functions against each other and display the results
-this will be done by testing each value of playerChoice and computerChoice, if the player wins the exchange(true) (rock beats scissors etc.), 
-we will display that the player won that round. if the player has lost the exchange (false), 
-then we will display that they lost that round. */
-
-function playRound(number) {
+function playRound(number = 1) {
 for (let i = 0; i < number; i++) {
   
-  let player = playerChoice();
+  let player = playerPick;
   let computer = computerChoice();
 
   
-  let roundTie = () => {
+  const roundTie = () => {
     if (player == "rock" && computer == "rock" || player == "paper" && computer == "paper" || player == "scissors" && computer == "scissors") {
+      ties++;
+      ROUNDTIES.innerHTML = ties;
       return true;
     }
   }
   
-  let roundWin = () => {
+  const roundWin = () => {
     if (player == "rock" && computer == "scissors" || player == "scissors" && computer == "paper" || player == "paper" && computer == "rock") {
+      wins++;
+      ROUNDWINS.innerHTML = wins;
       return true;
     }
   }
   
-  let roundLose = () => {
+  const roundLose = () => {
     if(player == "rock" && computer == "paper" || player == "paper" && computer == "scissors" || player == "scissors" && computer == "rock") {
+      losses++;
+      ROUNDLOSSES.innerHTML = losses;
       return true;
     }
   }
@@ -76,17 +78,36 @@ for (let i = 0; i < number; i++) {
   let win = roundWin();
   let lose = roundLose();
 
-  console.log(`player chose: ${player} & computer chose: ${computer}`)
+  choices.innerHTML = `<span class="player-chose">Player chose:</span> ${player} <span class="computer-chose">Computer chose:</span> ${computer}`;
+  resultsContainer.appendChild(choices);
   
 
   if(win) {
-      console.log("You Win!")
+      result.textContent = "You Win!";
+      result.style.cssText = "background: rgb(179, 255, 179); border: 4px solid green"
   } else if (lose) {
-      console.log("You Lose!")
+      result.textContent = "You Lose!";
+      result.style.cssText = "background: rgb(255, 179, 179); border: 4px solid red"
   } else if (tie) {
-      console.log("It's A Tie!")
+      result.textContent = "It's A Tie!";
+      result.style.cssText = "background: white; border: 4px solid black"
   } else {
-      console.error("Something went wrong. Be sure to put rock, paper, or scissors in the input!")
+      result.textContent = "ERROR";
   }
+  resultsContainer.appendChild(result);
+  played++;
+  ROUNDPLAYED.innerHTML = played;
 }
 }
+
+const addClickListener = function(callback) {
+    buttons.forEach((button) => {button.addEventListener('click', callback)});
+}
+
+const playRPS = function(e) {
+  let user = e.target.id;
+  playerPick = user;
+  playRound();
+}
+
+addClickListener(playRPS);
