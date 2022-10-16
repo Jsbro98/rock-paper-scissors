@@ -17,11 +17,12 @@ const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 const buttons = document.querySelectorAll('button');
-const result = document.createElement('div')
-const choices = document.createElement('div')
 const resultsContainer = document.querySelector('.results-container')
 
+const result = document.createElement('div')
 result.classList.add("results")
+
+const choices = document.createElement('div')
 choices.classList.add("results")
 
 function randomNumber() {
