@@ -68,6 +68,14 @@ buttonWrapper.appendChild(buttonRock);
 buttonWrapper.appendChild(buttonPaper);
 buttonWrapper.appendChild(buttonScissors);
 
+// creating results container
+const resultsContainer = document.createElement('div');
+resultsContainer.classList.add('results-container');
+
+// adding this element to the document
+body.appendChild(resultsContainer);
+
+
 
 
 
@@ -98,7 +106,6 @@ const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 const buttons = document.querySelectorAll('button');
 
-const resultsContainer = document.querySelector('.results-container')
 
 // these create divs to give the user feedback
 const result = document.createElement('div')
