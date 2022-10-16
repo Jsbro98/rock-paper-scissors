@@ -1,6 +1,60 @@
+/* This entire section below is for the creation of
+ all elements and styling for this project */
+
+const body = document.querySelector('body')
+
+// creation of tally wrapper and all elements within it
+const tallyWrapper = document.createElement('div');
+tallyWrapper.classList.add("tally-wrapper");
+
+const roundsWon = document.createElement('div');
+roundsWon.textContent = "Rounds Won: ";
+
+const roundsLost = document.createElement('div');
+roundsLost.textContent = "Rounds Lost: ";
+
+const roundsTied = document.createElement('div');
+roundsTied.textContent = "Rounds Tied: ";
+
+const roundsPlayed = document.createElement('div');
+roundsPlayed.textContent = "Rounds PLayed: ";
+
+const roundsWonSpan = document.createElement('span');
+roundsWonSpan.classList.add("rounds-won");
+
+const roundsLostSpan = document.createElement('span');
+roundsLostSpan.classList.add("rounds-lost");
+
+const roundsTiedSpan = document.createElement('span');
+roundsTiedSpan.classList.add("rounds-tied");
+
+const roundsPlayedSpan = document.createElement('span');
+roundsPlayedSpan.classList.add("rounds-played")
+
+body.appendChild(tallyWrapper);
+
+tallyWrapper.appendChild(roundsWon);
+tallyWrapper.appendChild(roundsLost);
+tallyWrapper.appendChild(roundsTied);
+tallyWrapper.appendChild(roundsPlayed);
+
+roundsWon.append(roundsWonSpan);
+roundsLost.append(roundsLostSpan);
+roundsTied.append(roundsTiedSpan);
+roundsPlayed.append(roundsPlayedSpan);
+
+
+
+
+
+
+
+
+// two main varibles for the main logic function
 let computerPick;
 let playerPick;
 
+// tally variables and selectors
 let wins = 0;
 const ROUNDWINS = document.querySelector('.rounds-won');
 
@@ -13,17 +67,21 @@ const ROUNDLOSSES = document.querySelector('.rounds-lost');
 let played = 0;
 const ROUNDPLAYED = document.querySelector('.rounds-played');
 
+// all button selectors
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 const buttons = document.querySelectorAll('button');
+
 const resultsContainer = document.querySelector('.results-container')
 
+// these create divs to give the user feedback
 const result = document.createElement('div')
 result.classList.add("results")
 
 const choices = document.createElement('div')
 choices.classList.add("results")
+
 
 function randomNumber() {
   return Math.floor(((Math.random()) * 3) + 1);
@@ -44,6 +102,7 @@ function computerChoice() {
   }
 }
 
+// main logic function
 function playRound(number = 1) {
 for (let i = 0; i < number; i++) {
   
@@ -101,10 +160,12 @@ for (let i = 0; i < number; i++) {
 }
 }
 
+// function to add event listeners to the buttons
 const addClickListener = function(callback) {
     buttons.forEach((button) => {button.addEventListener('click', callback)});
 }
 
+// function attached to the buttons
 const playRPS = function(e) {
   let user = e.target.id;
   playerPick = user;
