@@ -1,5 +1,5 @@
 /* This entire section below is for the creation of
- all elements and styling for this project */
+ all elements for this project */
 
 const body = document.querySelector('body')
 
@@ -74,6 +74,21 @@ resultsContainer.classList.add('results-container');
 
 // adding this element to the document
 body.appendChild(resultsContainer);
+
+
+
+/* below in this section is all the styling for this project */
+
+tallyWrapper.style.height = "150px";
+tallyWrapper.style.width = "200px";
+tallyWrapper.style.padding = "10px"
+tallyWrapper.style.background = "lightgrey";
+tallyWrapper.style.border = "2px solid black";
+tallyWrapper.style.borderRadius = "10%"
+tallyWrapper.style.display = "flex";
+tallyWrapper.style.flexFlow = "column";
+tallyWrapper.style.justifyContent = "space-between";
+tallyWrapper.style.boxShadow = "5px 5px 10px #d9d9d9"
 
 
 
