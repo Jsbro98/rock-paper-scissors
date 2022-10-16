@@ -31,6 +31,8 @@ roundsTiedSpan.classList.add("rounds-tied");
 const roundsPlayedSpan = document.createElement('span');
 roundsPlayedSpan.classList.add("rounds-played")
 
+
+// adding these elements to the document
 body.appendChild(tallyWrapper);
 
 tallyWrapper.appendChild(roundsWon);
@@ -42,6 +44,29 @@ roundsWon.append(roundsWonSpan);
 roundsLost.append(roundsLostSpan);
 roundsTied.append(roundsTiedSpan);
 roundsPlayed.append(roundsPlayedSpan);
+
+// creation of the button wrapper and elements within it
+const buttonWrapper = document.createElement('div');
+buttonWrapper.classList.add("button-wrapper");
+
+const buttonRock = document.createElement('button');
+buttonRock.setAttribute('id', 'rock');
+buttonRock.textContent = "Rock";
+
+const buttonPaper = document.createElement('button');
+buttonPaper.setAttribute('id', 'paper');
+buttonPaper.textContent = "Paper";
+
+const buttonScissors = document.createElement('button');
+buttonScissors.setAttribute('id', 'scissors')
+buttonScissors.textContent = 'Scissors'
+
+// adding these elements to the document
+body.appendChild(buttonWrapper);
+
+buttonWrapper.appendChild(buttonRock);
+buttonWrapper.appendChild(buttonPaper);
+buttonWrapper.appendChild(buttonScissors);
 
 
 
