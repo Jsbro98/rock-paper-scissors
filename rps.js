@@ -2,6 +2,14 @@
  all elements for this project */
 
 const body = document.querySelector('body')
+body.style.background = "#e6e6e6"
+
+// creation of the page header. Also styling and adding it to the page
+const header = document.createElement('h1');
+header.style.textAlign = "center";
+header.textContent = "Welcome to Rock, Paper, Scissors! Please make a selection."
+header.style.background = "#d9d9d9"
+body.appendChild(header);
 
 // creation of tally wrapper and all elements within it
 const tallyWrapper = document.createElement('div');
@@ -85,17 +93,48 @@ tallyWrapper.style.padding = "10px"
 tallyWrapper.style.background = "lightgrey";
 tallyWrapper.style.border = "2px solid black";
 tallyWrapper.style.borderRadius = "10%"
-tallyWrapper.style.display = "flex";
+tallyWrapper.style.display = "inline-flex";
 tallyWrapper.style.flexFlow = "column";
 tallyWrapper.style.justifyContent = "space-between";
 tallyWrapper.style.boxShadow = "5px 5px 10px #d9d9d9"
+tallyWrapper.style.marginBottom = "10px";
 
+buttonWrapper.style.display = "inline-flex";
+buttonWrapper.style.flexFlow = "column wrap"
+buttonWrapper.style.height = "150px";
+buttonWrapper.style.width = "150px";
+buttonWrapper.style.marginLeft = "10px";
+buttonWrapper.style.padding = "5px";
+buttonWrapper.style.gap = "5px";
 
+// creating an array to style all buttons
+const buttonArray = [buttonRock, buttonPaper, buttonScissors];
+buttonArray.forEach(button => {
+  button.style.flex = "1";
+  button.style.border = "solid white 1px"
+  button.style.borderRadius = "10px";
+});
 
+// individual button styling
+buttonRock.style.background = "#ffc2b3";
 
+buttonPaper.style.background = "#b3b3ff";
 
+buttonScissors.style.background = "#ffffcc"
 
+const hoverListener = (e) => {
+  const value = e.target.id;
+  const style = e.target.style
 
+  if (value === 'rock') {
+    style.background = "#ff5c33";
+  } else if (value === 'paper') {
+    style.background = "#4d4dff";
+  } else {
+    style.background = "#ffff4d"
+  };
+};
+buttonArray.forEach(button => button.addEventListener('mouseover', hoverListener));
 
 
 // two main varibles for the main logic function
