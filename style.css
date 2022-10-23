@@ -1,0 +1,90 @@
+.score-button-wrapper {
+    height: 350px;
+    width: 1100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 55px;
+}
+
+
+button {
+    border: rgb(255, 166, 0) solid 5px; 
+    background: rgb(255, 217, 0); 
+    font-size: 25px;
+    width: 150px; 
+    height: 150px;
+    margin: 0 12px;
+}
+
+button:hover {
+    background: rgb(255, 190, 69);
+}
+
+button:active {
+    background: rgb(255, 242, 0);
+}
+
+.results-container {
+    display: flex;
+
+}
+
+.results {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
+    font-size: 25px;
+    width: auto; height: 250px;
+    margin: 0 15px;
+}
+
+.player-chose {
+    text-decoration: underline;
+    color: red;
+    font-weight: bold;
+    font-size: 27px;
+    margin: 20px;
+}
+
+.computer-chose {
+    text-decoration: underline;
+    color: blue;
+    font-weight: bold;
+    font-size: 27px;
+    margin: 20px;
+}
+
+.scoreboard {
+    display: flex;
+    flex-flow: row wrap;
+    height: 304px;
+    width: 304px;
+    border: 4px solid black;
+}
+
+.scoreboard > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74px; width: 152px;
+    flex: 1;
+    flex-basis: 150px;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 15px;
+    background: rgb(198, 198, 198);
+}
+
+.rounds-won, .rounds-lost, .rounds-tied, .rounds-played {
+    color: red;
+}
