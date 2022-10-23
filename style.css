@@ -61,16 +61,16 @@ button {
 }
 
 #scissors {
-    background: rgb(0, 255, 4);
-    border: 5px solid rgb(0, 169, 3);
+    background: rgb(255, 234, 0);
+    border: 5px solid rgb(169, 163, 0);
 }
 
 #scissors:hover {
-    background: rgb(142, 255, 143);
+    background: rgb(255, 246, 142);
 }
 
 #scissors:active {
-    background: rgb(0, 118, 2);
+    background: rgb(118, 112, 0);
     color: white;
 }
 
