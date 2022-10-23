@@ -24,6 +24,7 @@ button {
     flex: 1;
     min-height: 200px;
     border-radius: 20px;
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.438);
 }
 
 .buttons {
@@ -89,6 +90,7 @@ button {
     width: auto; height: 275px;
     margin: 0 15px;
     background: white;
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.438);
 }
 
 .player-chose {
@@ -114,6 +116,7 @@ button {
     width: 446px;
     border: 4px solid black;
     flex-shrink: 0;
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.438);
 }
 
 .scoreboard > * {
