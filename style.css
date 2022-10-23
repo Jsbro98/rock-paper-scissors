@@ -23,6 +23,7 @@ button {
     margin: 0 12px;
     flex: 1;
     min-height: 200px;
+    border-radius: 20px;
 }
 
 .buttons {
