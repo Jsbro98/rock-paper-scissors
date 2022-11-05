@@ -16,13 +16,22 @@ const ROUNDPLAYED = document.querySelector('.rounds-played');
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
-const buttons = document.querySelectorAll('button');
+const reset = document.querySelector('#reset')
+const buttons = document.querySelectorAll('button:not(#reset)');
 const result = document.createElement('div')
 const choices = document.createElement('div')
 const resultsContainer = document.querySelector('.results-container')
 
 result.classList.add("results")
 choices.classList.add("results")
+
+function resetValues() {
+  const array = [ROUNDLOSSES, ROUNDPLAYED, ROUNDTIES, ROUNDWINS];
+  array.forEach(index => index.textContent = "");
+  result.remove();
+  choices.remove();
+  return wins = 0, ties = 0, losses = 0, played = 0;
+};
 
 
 function randomNumber() {
@@ -113,3 +122,4 @@ const playRPS = function(e) {
 }
 
 addClickListener(playRPS);
+reset.addEventListener('click', resetValues);

@@ -4,13 +4,14 @@ html {
 
 .score-button-wrapper {
     height: 350px;
-    max-width: 1300px;
+    max-width: 1460px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 75px auto;
-    gap: 155px;
+    gap: calc(10px + 10vw);
 }
+
 
 h1 {
     text-align: center;
@@ -18,13 +19,17 @@ h1 {
 }
 
 
-button {
-    font-size: 45px;
+button:not(#reset) {
+    font-size: calc(5px + 2vw);
     margin: 0 12px;
     flex: 1;
     min-height: 200px;
     border-radius: 20px;
     box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.438);
+    width: 11vw;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.5);
 }
 
 .buttons {
@@ -86,7 +91,7 @@ button {
     justify-content: center;
     align-items: center;
     border: 4px solid black;
-    font-size: 35px;
+    font-size: calc(8px + 1.25vw);
     width: auto; height: 275px;
     margin: 0 15px;
     background: white;
@@ -97,26 +102,31 @@ button {
     text-decoration: underline;
     color: red;
     font-weight: bold;
-    font-size: 40px;
+    font-size: calc(10px + 1.5vw);
     margin: 20px;
+    text-align: center;
 }
 
 .computer-chose {
     text-decoration: underline;
     color: blue;
     font-weight: bold;
-    font-size: 40px;
+    font-size: calc(10px + 1.5vw);
     margin: 20px;
+    text-align: center;
+}
+
+.score-reset-wrapper {
+    display: flex;
+    flex-flow: column;
 }
 
 .scoreboard {
     display: flex;
     flex-flow: row wrap;
-    height: 304px;
-    width: 446px;
     border: 4px solid black;
-    flex-shrink: 0;
     box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.438);
+    flex: 1 250px;
 }
 
 .scoreboard > * {
@@ -124,11 +134,36 @@ button {
     justify-content: center;
     align-items: center;
     flex: 1;
-    flex-basis: 150px;
+    flex-basis: 250px;
     border: 1px solid black;
     font-weight: bold;
-    font-size: 25px;
+    font-size: calc(8px + 1vw);
     background: rgb(198, 198, 198);
+}
+
+#reset {
+    width: 30%;
+    min-width: 75px;
+    font-weight: bold;
+    font-size: calc(7px + 1vw);
+    background: black;
+    color: white;
+    border: 4px solid grey;
+    border-radius: 20px;
+    margin: 0, auto;
+    padding: 2%;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.438);
+}
+
+#reset:hover {
+    background: rgb(53, 53, 53);
+
+}
+
+#reset:active {
+    color: rgb(113, 113, 113);
+    border: 4px solid black;
+    background: rgb(33, 33, 33);
 }
 
 .rounds-won, .rounds-lost, .rounds-tied, .rounds-played {
