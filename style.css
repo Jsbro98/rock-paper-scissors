@@ -1,171 +1,171 @@
 html {
-    background: rgb(236, 236, 236);
+  background: rgb(236, 236, 236);
 }
 
 .score-button-wrapper {
-    height: 350px;
-    max-width: 1460px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 75px auto;
-    gap: calc(10px + 10vw);
+  height: 350px;
+  max-width: 1460px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 75px auto;
+  gap: calc(10px + 10vw);
 }
-
 
 h1 {
-    text-align: center;
-    font-size: 55px;
+  text-align: center;
+  font-size: 55px;
 }
 
-
 button:not(#reset) {
-    font-size: calc(5px + 2vw);
-    margin: 0 12px;
-    flex: 1;
-    min-height: 200px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.438);
-    width: 11vw;
-    font-weight: bold;
-    overflow-wrap: break-word;
-    text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.5);
+  font-size: calc(5px + 2vw);
+  margin: 0 12px;
+  flex: 1;
+  min-height: 200px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.438);
+  width: 11vw;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.5);
 }
 
 .buttons {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 #rock {
-    background: rgb(255, 55, 0);
-    border: 5px solid rgb(131, 0, 0);
+  background: rgb(255, 55, 0);
+  border: 5px solid rgb(131, 0, 0);
 }
 
 #rock:hover {
-    background: rgb(255, 102, 102);
+  background: rgb(255, 102, 102);
 }
 
 #rock:active {
-    background: rgb(152, 0, 0);
-    color: white;
+  background: rgb(152, 0, 0);
+  color: white;
 }
 
 #paper {
-    background: rgb(0, 153, 255);
-    border: 5px solid rgb(0, 0, 187);
+  background: rgb(0, 153, 255);
+  border: 5px solid rgb(0, 0, 187);
 }
 
 #paper:hover {
-    background: rgb(106, 195, 255);
+  background: rgb(106, 195, 255);
 }
 
 #paper:active {
-    background: rgb(0, 83, 138);
-    color: white;
+  background: rgb(0, 83, 138);
+  color: white;
 }
 
 #scissors {
-    background: rgb(255, 234, 0);
-    border: 5px solid rgb(169, 163, 0);
+  background: rgb(255, 234, 0);
+  border: 5px solid rgb(169, 163, 0);
 }
 
 #scissors:hover {
-    background: rgb(255, 246, 142);
+  background: rgb(255, 246, 142);
 }
 
 #scissors:active {
-    background: rgb(118, 112, 0);
-    color: white;
+  background: rgb(118, 112, 0);
+  color: white;
 }
 
 .results-container {
-    display: flex;
-
+  display: flex;
 }
 
 .results {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 4px solid black;
-    font-size: calc(8px + 1.25vw);
-    width: auto; height: 275px;
-    margin: 0 15px;
-    background: white;
-    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.438);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid black;
+  font-size: calc(8px + 1.25vw);
+  width: auto;
+  height: 275px;
+  margin: 0 15px;
+  background: white;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.438);
 }
 
 .player-chose {
-    text-decoration: underline;
-    color: red;
-    font-weight: bold;
-    font-size: calc(10px + 1.5vw);
-    margin: 20px;
-    text-align: center;
+  text-decoration: underline;
+  color: red;
+  font-weight: bold;
+  font-size: calc(10px + 1.5vw);
+  margin: 20px;
+  text-align: center;
 }
 
 .computer-chose {
-    text-decoration: underline;
-    color: blue;
-    font-weight: bold;
-    font-size: calc(10px + 1.5vw);
-    margin: 20px;
-    text-align: center;
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+  font-size: calc(10px + 1.5vw);
+  margin: 20px;
+  text-align: center;
 }
 
 .score-reset-wrapper {
-    display: flex;
-    flex-flow: column;
+  display: flex;
+  flex-flow: column;
 }
 
 .scoreboard {
-    display: flex;
-    flex-flow: row wrap;
-    border: 4px solid black;
-    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.438);
-    flex: 1 250px;
+  display: flex;
+  flex-flow: row wrap;
+  border: 4px solid black;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.438);
+  flex: 1 250px;
 }
 
 .scoreboard > * {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    flex-basis: 250px;
-    border: 1px solid black;
-    font-weight: bold;
-    font-size: calc(8px + 1vw);
-    background: rgb(198, 198, 198);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-basis: 250px;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: calc(8px + 1vw);
+  background: rgb(198, 198, 198);
 }
 
 #reset {
-    width: 30%;
-    min-width: 75px;
-    font-weight: bold;
-    font-size: calc(7px + 1vw);
-    background: black;
-    color: white;
-    border: 4px solid grey;
-    border-radius: 20px;
-    margin: 0, auto;
-    padding: 2%;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.438);
+  width: 30%;
+  min-width: 75px;
+  font-weight: bold;
+  font-size: calc(7px + 1vw);
+  background: black;
+  color: white;
+  border: 4px solid grey;
+  border-radius: 20px;
+  margin: 0, auto;
+  padding: 2%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.438);
 }
 
 #reset:hover {
-    background: rgb(53, 53, 53);
-
+  background: rgb(53, 53, 53);
 }
 
 #reset:active {
-    color: rgb(113, 113, 113);
-    border: 4px solid black;
-    background: rgb(33, 33, 33);
+  color: rgb(113, 113, 113);
+  border: 4px solid black;
+  background: rgb(33, 33, 33);
 }
 
-.rounds-won, .rounds-lost, .rounds-tied, .rounds-played {
-    color: red;
+.rounds-won,
+.rounds-lost,
+.rounds-tied,
+.rounds-played {
+  color: red;
 }
